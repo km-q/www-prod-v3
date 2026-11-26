@@ -36,7 +36,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+KR:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+JP:wght@600;900&family=Noto+Serif+KR:wght@600;900&family=Noto+Serif+SC:wght@600&family=Noto+Serif+TC:wght@600;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500&family=Noto+Sans+KR:wght@400;500&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+JP:wght@600;900&family=Noto+Serif+KR:wght@600;900&family=Noto+Serif+SC:wght@600&family=Noto+Serif+TC:wght@600;900&family=Noto+Sans+SC:wght@400;500&family=Noto+Color+Emoji&display=swap">
 <style>
 /* Layout: a night sky of ink-wash mountains and drifting particles; content floats above in a 1180px column. One dark world, committed. */
 :root{
@@ -448,6 +448,18 @@ nav.main .dd-m a{display:block;color:var(--paper);border-radius:3px}
 nav.main .dd-m a:hover{background:rgba(63,240,216,.08);color:var(--jade)}
 nav.main .dd-m a[aria-current]{color:var(--jade)}
 @media (max-width:760px){.dd-t,.dd-m{display:none!important}}
+/* Flags (colour emoji font so Windows shows real flags) and the header call to action */
+.flag{font-family:"Apple Color Emoji","Noto Color Emoji","Segoe UI Emoji",sans-serif;font-style:normal;font-weight:400;letter-spacing:0;margin-right:.4em}
+.rtag .flag{margin-right:.3em}
+.nat{font-weight:500;color:var(--mist)}
+.nat:lang(zh-Hans){font-family:"Noto Sans SC",sans-serif}
+.nat:lang(zh-Hant){font-family:"Noto Sans TC",sans-serif}
+.nat:lang(ja){font-family:"Noto Sans JP",sans-serif}
+.nat:lang(ko){font-family:"Noto Sans KR",sans-serif}
+.field select{font-family:"Be Vietnam Pro",var(--f-sans-cjk),"Apple Color Emoji","Noto Color Emoji",system-ui,sans-serif}
+.hdr-cta{padding:8px 16px;font-size:13.5px;white-space:nowrap}
+@media (max-width:760px){nav.main{flex:1 1 calc(100% - 140px);width:auto;min-width:0}.hdr-cta{order:4;padding:7px 12px;font-size:12.5px}}
+@media (max-width:420px){.brand-txt b{font-size:16px}.langsel select{padding:7px 22px 7px 8px}}
 
 /* Home: three paths */
 .doors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
@@ -712,6 +724,7 @@ table.inv{border-collapse:collapse;width:100%;min-width:440px;font-size:13.5px}
         <option value="vi">Tiếng Việt</option>
       </select>
     </div>
+    <a class="btn hdr-cta" href="#contact" data-i="nav.cta"></a>
   </div>
 </header>
 
@@ -1457,6 +1470,11 @@ Object.assign(I.ja,{"acad.hl":["量子の時代を、","一計ずつ学ぶ"],"c.
 Object.assign(I.ko,{"acad.hl":["양자 시대를 배우다,","한 번에 한 계략씩"],"c.hl":["양자 보안 커리어,","실제 프로젝트로 쌓다"],"c.eyebrow":"習 · 미래 실무자를 위한 실습"});
 Object.assign(I.vi,{"acad.hl":["Học về kỷ nguyên lượng tử,","từng kế sách một"],"c.hl":["Sự nghiệp an ninh lượng tử của bạn,","xây dựng từ dự án thực tế"],"c.eyebrow":"習 · Thực tập cho người hành nghề tương lai"});
 Object.assign(I.ko,{"pv":["양식을 제출하시면 입력하신 내용(이름, 이메일 주소, 양식에 따라 소속 기관, 문의 유형, 메시지)을 받습니다. 양식은 Google Apps Script 서비스를 통해 제갈양자에 전달되며, Google이 당사를 대신해 처리합니다.","이 정보는 회신, 확인 이메일 발송, 예약·지원·문의 처리에 사용합니다.","당사가 보유한 귀하의 정보를 확인하거나 정정·삭제를 요청하시려면 문의 양식으로 연락해 주십시오.","선택하신 언어는 브라우저의 로컬 저장소에 기억되어 다음에도 같은 언어로 열립니다. 언제든지 브라우저 설정에서 삭제할 수 있습니다.","글꼴은 Google Fonts에서 불러오며, 이때 Google이 귀하의 IP 주소를 받습니다. 당사는 쿠키를 설정하지 않으며 분석이나 광고 도구도 사용하지 않습니다."],"tm":["이 사이트의 모든 내용은 일반 정보이며 법률 또는 규제 자문이 아닙니다. 규제 일정은 공개 자료를 요약한 것으로 변경될 수 있으니, 의존하기 전에 규제 기관의 원문을 확인하십시오.","아카데미의 수업과 데모는 학습용입니다. 시뮬레이션은 단순화된 모델이며 실제 시스템의 측정값이 아닙니다.","자문 업무는 이 사이트가 아니라 서명된 작업 명세서에 따릅니다."],"about.parts":[["謀","자문","홍콩, 싱가포르, 마카오의 은행, 보험사, 핵심 기반시설을 위한 양자내성암호 및 사이버 보안 자문.","자문 서비스 보기","#advisory"],["學","아카데미","여덟 가지 계략, 다섯 단계, 네 개의 실험실로 삼국지를 통해 양자 과학과 사이버 보안을 가르칩니다.","아카데미 방문","#academy"],["習","실습","양자 컴퓨팅, 암호, 사이버 보안으로 나아가려는 이들을 위한 실제 프로젝트 유급 실습.","실습 보기","#coop"]],"nf.h":"이 길은 돌 미로로 이어집니다","nf.p":"어복포의 육손처럼, 출구 없는 진에 들어섰습니다. 찾으시는 페이지는 존재하지 않습니다.","nf.btn":"생문으로 나가기"});
+Object.assign(I.en,{"nav.cta":"Get in touch"});Object.assign(I.zh,{"nav.cta":"聯絡我們"});Object.assign(I.ja,{"nav.cta":"お問い合わせ"});Object.assign(I.ko,{"nav.cta":"문의하기"});Object.assign(I.vi,{"nav.cta":"Liên hệ"});
+var FLAGS=[["🇭🇰","🇸🇬","🇲🇴"],["🇨🇳","🇹🇼","🇰🇷","🇯🇵"],["🇨🇦","🇺🇸","🇬🇧","🇪🇺"]],FLAGC={hk:"🇭🇰",sg:"🇸🇬",mo:"🇲🇴",cn:"🇨🇳",roc:"🇹🇼",kr:"🇰🇷",jp:"🇯🇵",ca:"🇨🇦",us:"🇺🇸",nist:"🇺🇸",omb:"🇺🇸",uk:"🇬🇧",eu:"🇪🇺"};
+function flg(f){return f?'<span class="flag" aria-hidden="true">'+f+'</span>':'';}
+var NATIVE=[[],[["国家密码管理局","zh-Hans"],["金融監督管理委員會","zh-Hant"],["과학기술정보통신부","ko"],["国家サイバー統括室","ja"]],[null,null,null,["EU","en"]]];
+function natv(i,k,name){var n=NATIVE[i]&&NATIVE[i][k];if(!n||plain(name)===n[0])return "";var w=(lang==="zh"||lang==="ja");return '<span class="nat no-simp" lang="'+n[1]+'">'+(w?"（":" (")+n[0]+(w?"）":")")+'</span>';}
 function hl2(id,key){var h=T(key);$(id).innerHTML='<span class="ln">'+rb(h[0])+'</span> <em class="ln">'+rb(h.slice(1).join(" "))+'</em>';}
 function renderHeads(){hl2("acadH1","acad.hl");hl2("cH1","c.hl");}
 function renderDoors(){
@@ -1473,7 +1491,7 @@ Object.assign(I.en,{
 'j.h':'Mapped to your jurisdiction',
 'j.p':'Hong Kong, Singapore and Macao are home ground. We also serve the rest of the Sinosphere, and organisations anywhere that share a love of the Three Kingdoms. Every plan follows the rules of each jurisdiction you operate in.',
 'f.jur':'Jurisdiction or regulator',
-'jurGroups':[['Home ground',['Hong Kong','Singapore','Macao']],['Neighbours',['State Cryptography Administration (SCA)','Financial Supervisory Commission (FSC)','Ministry of Science and ICT (MSIT)','National Cyber Command Office (NCO)']],['Allies from Afar',['Canadian Centre for Cyber Security (CCCS)','NIST and OMB','National Cyber Security Centre (NCSC)','NIS Cooperation Group']],['Other',['Elsewhere']]],
+'jurGroups':[['Home ground',['Hong Kong','Singapore','Macao']],['Neighbours',['State Cryptography Administration (国家密码管理局)','Financial Supervisory Commission (金融監督管理委員會)','Ministry of Science and ICT (과학기술정보통신부)','National Cyber Command Office (国家サイバー統括室)']],['Allies from Afar',['Canadian Centre for Cyber Security (CCCS)','NIST and OMB','National Cyber Security Centre (NCSC)','NIS Cooperation Group (EU)']],['Other',['Elsewhere']]],
 'tl.tabs':['Home ground','Neighbours','Allies from Afar'],
 'tl.note2':'The SCA has not published a migration deadline. The SCA and MSIT tracks are standardising their own algorithms.',
 'tl.note3':'NIST and OMB dates bind federal agencies and, through procurement, their vendors. CCCS dates cover federal systems. NCSC and NIS Cooperation Group dates are published targets.',
@@ -1512,7 +1530,7 @@ Object.assign(I.zh,{
 'j.h':'按你的司法管轄區規劃',
 'j.p':'香港、新加坡及澳門是我們的主場。我們亦服務漢字文化圈其他地區，以及世界各地熱愛三國故事的機構。每份計劃都按你所營運的每個司法管轄區的規則制定。',
 'f.jur':'司法管轄區或監管機構',
-'jurGroups':[['主場',['香港','新加坡','澳門']],['漢字文化圈鄰邦',['國家密碼管理局','金融監督管理委員會','科學技術情報通信部（MSIT）','國家網絡統括室（NCO）']],['遠方盟友',['加拿大網絡安全中心（CCCS）','NIST 及 OMB','國家網絡安全中心（NCSC）','NIS 合作小組']],['其他',['其他地區']]],
+'jurGroups':[['主場',['香港','新加坡','澳門']],['漢字文化圈鄰邦',['国家密码管理局','金融監督管理委員會','科學技術情報通信部（과학기술정보통신부）','國家網絡統括室（国家サイバー統括室）']],['遠方盟友',['加拿大網絡安全中心（CCCS）','NIST 及 OMB','國家網絡安全中心（NCSC）','NIS 合作小組（EU）']],['其他',['其他地區']]],
 'tl.tabs':['主場','漢字文化圈鄰邦','遠方盟友'],
 'tl.note2':'國家密碼管理局尚未公布遷移期限。國密局及 MSIT 兩個體系正自行制定演算法標準。',
 'tl.note3':'NIST 及 OMB 的期限約束聯邦機關，並經採購傳導至供應商。CCCS 的期限適用於聯邦系統。NCSC 及 NIS 合作小組的日期為已公布目標。',
@@ -1535,7 +1553,7 @@ Object.assign(I.zh,{
   {c:'星',n:'新加坡',r:'MAS · CSA',f:['關鍵資訊基礎設施擁有者 2031 年前完成；MAS 建議 2030 年底前完成關鍵系統。']},
   {c:'澳',n:'澳門',r:'第 13/2019 號法律《網絡安全法》',f:['尚未有後量子時間表，但關鍵基礎設施規例已經適用。']}]},
  {g:'鄰',t:'漢字文化圈鄰邦',d:'漢字文化圈各地的監管機構。以遙距方式服務，按需要出差。其中兩個監管體系正自行制定演算法標準，區域集團的計劃須能同時支援多套演算法。',j:[
-  {c:'國密局',n:'國家密碼管理局',r:'聯同商用密碼標準研究院（ICCS）',f:['正自行制定後量子標準。商用密碼標準研究院於 2025 年 2 月啟動新一代商用密碼算法計劃（NGCC），並排除 NIST 的演算法。','首輪候選算法已於 2026 年 9 月公布。所定標準將規管商用密碼，涵蓋銀行及電訊營運者。','目前尚未公布全國遷移期限。'],s:[['ICCS NGCC 公告','https://niccs.org.cn/en/notice/']]},
+  {c:'國密局',n:'国家密码管理局',r:'聯同商用密碼標準研究院（ICCS）',f:['正自行制定後量子標準。商用密碼標準研究院於 2025 年 2 月啟動新一代商用密碼算法計劃（NGCC），並排除 NIST 的演算法。','首輪候選算法已於 2026 年 9 月公布。所定標準將規管商用密碼，涵蓋銀行及電訊營運者。','目前尚未公布全國遷移期限。'],s:[['ICCS NGCC 公告','https://niccs.org.cn/en/notice/']]},
   {c:'金管會',n:'金融監督管理委員會',r:'金融業後量子密碼遷移參考指引',f:['金管會於 2026 年 6 月 18 日發布《金融業後量子密碼遷移參考指引》。','2026 至 2027 年：建立治理架構、盤點、密碼技術清冊及加密敏捷性；2027 至 2029 年：試辦驗證及共同測試。','高風險及高關鍵系統優先遷移，整體推動至 2035 年。'],s:[['金管會，2026 年 6 月','https://www.fsc.gov.tw/ch/home.jsp?id=96&parentpath=0,2&mcustomize=news_view.jsp&dataserno=202606180001&aplistdn=ou=news,ou=multisite,ou=chinese,ou=ap_root,o=fsc,c=tw&dtable=News']]},
   {c:'MSIT',n:'科學技術情報通信部',r:'聯同 KISA 及國家情報院',f:['2023 年 7 月的後量子總體計劃，目標於 2035 年前將國家密碼體系轉換至後量子密碼。','2025 年 1 月透過 KpqC 競賽選定本土演算法：HAETAE、AIMer、SMAUG-T 及 NTRU+。','全國試點計劃由 2025 年推行至 2028 年，金融業於 2027 年納入。'],s:[['Asia Business Daily，2025 年 2 月','https://www.asiae.co.kr/en/article/2025022709320355708']]},
   {c:'NCO',n:'國家網絡統括室',r:'聯同金融廳（FSA）',f:['國家網絡統括室於 2025 年 11 月的中期報告中，定下政府機關於 2035 年前遷移至後量子密碼。','政府路線圖將於 2026 財政年度內制定。','金融廳於 2024 年與三大銀行成立後量子研究小組，並已要求銀行開始遷移。'],s:[['金融廳研究小組，2024 年','https://www.fsa.go.jp/en/newsletter/weekly2024/614.html'],['中期報告報道','https://internet.watch.impress.co.jp/docs/news/2065972.html']]}]},
@@ -1545,9 +1563,9 @@ Object.assign(I.zh,{
   {c:'NCSC',n:'國家網絡安全中心',r:'後量子密碼遷移時間表',f:['2028 年前：完成盤點及初步遷移計劃。','2031 年前：完成最高優先的遷移工作。','2035 年前：所有系統、服務及產品完成遷移。'],s:[['NCSC 時間表','https://www.ncsc.gov.uk/guidance/pqc-migration-timelines']]},
   {c:'NIS CG',n:'NIS 合作小組',r:'聯同歐盟委員會',f:['成員國須於 2026 年底前開始過渡。','關鍵基礎設施及高風險系統須盡快遷移，最遲 2030 年底完成。','2035 年前盡可能完成所有系統。'],s:[['歐盟路線圖，2025 年 6 月','https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography']]}]}]
 });
-Object.assign(I.ja,{'m.juris':'[對應地域|たいおうちいき]','a.reach':'このほか、漢字文化圏の他の地域、北米、欧州のお客様にも対応しています。','tl.tabs':['本拠地','漢字文化圏の隣邦','遠方の盟友'],'jurGroups':[['本拠地',['香港','シンガポール','マカオ']],['漢字文化圏の隣邦',['国家暗号管理局（SCA）','金融監督管理委員会（FSC）','科学技術情報通信部（MSIT）','国家サイバー統括室（NCO）']],['遠方の盟友',['カナダ・サイバーセキュリティセンター（CCCS）','NIST・OMB','国家サイバーセキュリティセンター（NCSC）','NIS協力グループ']],['その他',['その他の地域']]]});
-Object.assign(I.ko,{'m.juris':'서비스 [地域|지역]','a.reach':'그 밖에 한자 문화권의 다른 지역, 북미, 유럽의 고객도 지원합니다.','tl.tabs':['본거지','한자 문화권의 이웃','먼 곳의 동맹'],'jurGroups':[['본거지',['홍콩','싱가포르','마카오']],['한자 문화권의 이웃',['국가암호관리국(SCA)','금융감독관리위원회(FSC)','과학기술정보통신부(MSIT)','국가사이버통괄실(NCO)']],['먼 곳의 동맹',['캐나다 사이버보안센터(CCCS)','NIST·OMB','국가사이버보안센터(NCSC)','NIS 협력그룹']],['기타',['기타 지역']]]});
-Object.assign(I.vi,{'m.juris':'Khu vực phục vụ','a.reach':'Chúng tôi cũng phục vụ khách hàng ở các khu vực khác của vùng văn hóa chữ Hán, Bắc Mỹ và châu Âu.','tl.tabs':['Sân nhà','Láng giềng Hán văn','Đồng minh phương xa'],'jurGroups':[['Sân nhà',['Hồng Kông','Singapore','Ma Cao']],['Láng giềng Hán văn',['Cục Quản lý Mật mã Nhà nước (SCA)','Ủy ban Giám sát Tài chính (FSC)','Bộ Khoa học và CNTT (MSIT)','Văn phòng Chỉ huy Không gian mạng Quốc gia (NCO)']],['Đồng minh phương xa',['Trung tâm An ninh mạng Canada (CCCS)','NIST và OMB','Trung tâm An ninh mạng Quốc gia (NCSC)','Nhóm Hợp tác NIS']],['Khác',['Nơi khác']]]});
+Object.assign(I.ja,{'m.juris':'[對應地域|たいおうちいき]','a.reach':'このほか、漢字文化圏の他の地域、北米、欧州のお客様にも対応しています。','tl.tabs':['本拠地','漢字文化圏の隣邦','遠方の盟友'],'jurGroups':[['本拠地',['香港','シンガポール','マカオ']],['漢字文化圏の隣邦',['国家暗号管理局（国家密码管理局）','金融監督管理委員会（金融監督管理委員會）','科学技術情報通信部（과학기술정보통신부）','国家サイバー統括室']],['遠方の盟友',['カナダ・サイバーセキュリティセンター（CCCS）','NIST・OMB','国家サイバーセキュリティセンター（NCSC）','NIS協力グループ（EU）']],['その他',['その他の地域']]]});
+Object.assign(I.ko,{'m.juris':'서비스 [地域|지역]','a.reach':'그 밖에 한자 문화권의 다른 지역, 북미, 유럽의 고객도 지원합니다.','tl.tabs':['본거지','한자 문화권의 이웃','먼 곳의 동맹'],'jurGroups':[['본거지',['홍콩','싱가포르','마카오']],['한자 문화권의 이웃',['국가암호관리국(国家密码管理局)','금융감독관리위원회(金融監督管理委員會)','과학기술정보통신부','국가사이버통괄실(国家サイバー統括室)']],['먼 곳의 동맹',['캐나다 사이버보안센터(CCCS)','NIST·OMB','국가사이버보안센터(NCSC)','NIS 협력그룹(EU)']],['기타',['기타 지역']]]});
+Object.assign(I.vi,{'m.juris':'Khu vực phục vụ','a.reach':'Chúng tôi cũng phục vụ khách hàng ở các khu vực khác của vùng văn hóa chữ Hán, Bắc Mỹ và châu Âu.','tl.tabs':['Sân nhà','Láng giềng Hán văn','Đồng minh phương xa'],'jurGroups':[['Sân nhà',['Hồng Kông','Singapore','Ma Cao']],['Láng giềng Hán văn',['Cục Quản lý Mật mã Nhà nước (国家密码管理局)','Ủy ban Giám sát Tài chính (金融監督管理委員會)','Bộ Khoa học và CNTT (과학기술정보통신부)','Văn phòng Chỉ huy Không gian mạng Quốc gia (国家サイバー統括室)']],['Đồng minh phương xa',['Trung tâm An ninh mạng Canada (CCCS)','NIST và OMB','Trung tâm An ninh mạng Quốc gia (NCSC)','Nhóm Hợp tác NIS (EU)']],['Khác',['Nơi khác']]]});
 function renderTiers(){
  var tabs=T('tl.tabs'),box=$('tlTabs');
  box.setAttribute('aria-label',plain(T('tl.h')));
@@ -1558,8 +1576,8 @@ function renderTiers(){
  sl.style.gridTemplateColumns=tlTier?'repeat('+n+',minmax(0,1fr))':'';
  sl.style.minWidth=tlTier?(n*200)+'px':'';
  $('tiers').innerHTML=T('tiers').map(function(t,i){
-  return '<article class="tier'+(i===0?' compact':'')+'"><div class="tier-h"><span class="glyph" aria-hidden="true">'+t.g+'</span><h3>'+rb(t.t)+'</h3><p>'+rb(t.d)+'</p>'+(t.link?'<a class="textlink" href="'+t.link[1]+'">'+rb(t.link[0])+'</a>':'')+'</div><div class="jur-grid">'+t.j.map(function(j){
-   return '<div class="jur"><div class="jur-top"><h4>'+rb(j.n)+'</h4><span class="code">'+j.c+'</span></div><span class="reg">'+rb(j.r)+'</span><ul class="facts">'+j.f.map(function(f){return '<li>'+rb(f)+'</li>';}).join('')+'</ul>'+(j.s&&j.s.length?'<p class="src">'+srcLinks(j.s)+'</p>':'')+'</div>';
+  return '<article class="tier'+(i===0?' compact':'')+'"><div class="tier-h"><span class="glyph" aria-hidden="true">'+t.g+'</span><h3>'+rb(t.t)+'</h3><p>'+rb(t.d)+'</p>'+(t.link?'<a class="textlink" href="'+t.link[1]+'">'+rb(t.link[0])+'</a>':'')+'</div><div class="jur-grid">'+t.j.map(function(j,k){
+   return '<div class="jur"><div class="jur-top"><h4 class="no-simp">'+rb(j.n)+natv(i,k,j.n)+'</h4><span class="code">'+j.c+'</span></div><span class="reg">'+rb(j.r)+'</span><ul class="facts">'+j.f.map(function(f){return '<li>'+rb(f)+'</li>';}).join('')+'</ul>'+(j.s&&j.s.length?'<p class="src">'+srcLinks(j.s)+'</p>':'')+'</div>';
   }).join('')+'</div></article>';
  }).join('');
 }
@@ -2699,7 +2717,7 @@ function renderAdded(){
  each(".vtitle",function(el){el.innerHTML=["諸","葛","量","子"].map(function(c,i){var r=VT_READ[lang];return '<span class="vc"><b>'+c+"</b>"+(r&&r[i]?"<i>"+r[i]+"</i>":"")+"</span>";}).join("");});
  renderHome(); renderCoop(); renderLegal(); renderAbout(); renderDoors(); renderHeads();
  each(".dd-t",function(b){b.setAttribute("aria-label",plain(T("m.sub")).replace("{x}",plain(T(b.getAttribute("data-sub")))));});
- each("select[data-groups]",function(s){var k=s.selectedIndex;s.innerHTML=T(s.getAttribute("data-groups")).map(function(g){return '<optgroup label="'+plain(g[0])+'">'+g[1].map(function(o){return "<option>"+plain(o)+"</option>";}).join("")+"</optgroup>";}).join("");if(k>0)s.selectedIndex=k;});
+ each("select[data-groups]",function(s){var k=s.selectedIndex;s.innerHTML=T(s.getAttribute("data-groups")).map(function(g,gi){return '<optgroup label="'+plain(g[0])+'">'+g[1].map(function(o,oi){var f=FLAGS[gi]&&FLAGS[gi][oi];return "<option>"+(f?f+" ":"")+plain(o)+"</option>";}).join("")+"</optgroup>";}).join("");if(k>0)s.selectedIndex=k;});
  each("select[data-opts]",function(s){var k=s.selectedIndex;s.innerHTML=optsFor(s.getAttribute("data-opts")).map(function(o){return "<option>"+o+"</option>";}).join("");if(k>0)s.selectedIndex=k;});
  var other=(lang==="ja"||lang==="ko"||lang==="vi");
  $("advNote").hidden=!other; $("coopNote").hidden=true; $("bLang").value=lang; $("ctLang").value=lang;
